@@ -20,3 +20,10 @@ class Customer:
 
 customer_alice = Customer("Alice", "Latte")
 customer_alice.greet()
+# step 3 - Multiple Items with a Constructor
+latte = MenuItem("Latte", 4.5)
+croissant = MenuItem("Croissant", 2.0)
+cold_brew = MenuItem("Cold Brew", 5.0)
+latte.describe()
+croissant.describe()
+cold_brew.describe()
