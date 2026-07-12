@@ -27,3 +27,17 @@ cold_brew = MenuItem("Cold Brew", 5.0)
 latte.describe()
 croissant.describe()
 cold_brew.describe()
+# step 4 - Can the Customer Afford It?
+class Customer:
+    def __init__(self, name, balance):
+        self.name = name
+        self.balance = balance
+    
+    def can_afford(self, price):
+        if self.balance >= price:
+            return True
+        else:
+            return False
+bob = Customer("Bob", 10.0)
+print(bob.can_afford(8.0))
+print(bob.can_afford(12.0))
