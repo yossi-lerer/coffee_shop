@@ -62,3 +62,16 @@ muffin.sell()
 print(muffin.status())
 muffin.restock()
 print(muffin.status())
+# step 6 - Coffee Shop Open and Close
+class CoffeeShop:
+    def __init__(self, name, city, capacity):
+        self.name = name
+        self.city = city
+        self.capacity = capacity
+    def open_shop(self):
+        print(f"{self.name} is now open in {self.city}! Capacity: {self.capacity} seats.")
+    def close_shop(self):
+        print(f"{self.name} is now closed. See you tomorrow!")
+brow_shop = CoffeeShop("Brew House", "Tel Aviv", 40)
+brow_shop.open_shop()
+brow_shop.close_shop()
