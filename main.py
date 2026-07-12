@@ -151,3 +151,20 @@ receipt1.add_item("Latte", 4.5)
 receipt1.add_item("Croissant", 2.0)
 receipt1.add_item("Water", 1.5)
 receipt1.print_receipt()
+# Extra Exercises
+# step 1 - Category Filtering
+class MenuItem:
+    def __init__(self, name, price, category):
+        self.name = name
+        self.price = price
+        self.category = category
+    def is_drink(self):
+        return "drink" in self.category
+    def is_cheap(self ,limit):
+        return self.price < limit
+espresso = MenuItem("Espresso", 3.5, "hot drink")
+muffin = MenuItem("Muffin", 2.0, "food")
+print(espresso.is_drink())
+print(espresso.is_cheap(3.0))
+print(muffin.is_drink())
+print(muffin.is_cheap(3.0))
