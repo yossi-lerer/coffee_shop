@@ -1,4 +1,10 @@
+def Separation_of_printing_stages(step):
+    print("=================================================================================================")
+    print(step)
+    print("=================================================================================================")
+
 # step 1 - Describe a Menu Item
+Separation_of_printing_stages("step 1 - Describe a Menu Item")
 class MenuItem:
     def __init__(self, name, price):
         self.name = name
@@ -10,6 +16,7 @@ class MenuItem:
 espresso = MenuItem("Espresso", 3.5)
 espresso.describe()
 # step 2 - Customer Greeting
+Separation_of_printing_stages("step 2 - Customer Greeting")
 class Customer:
     def __init__(self, name, favorite_drink):
         self.name = name
@@ -21,6 +28,7 @@ class Customer:
 customer_alice = Customer("Alice", "Latte")
 customer_alice.greet()
 # step 3 - Multiple Items with a Constructor
+Separation_of_printing_stages("step 3 - Multiple Items with a Constructor")
 latte = MenuItem("Latte", 4.5)
 croissant = MenuItem("Croissant", 2.0)
 cold_brew = MenuItem("Cold Brew", 5.0)
@@ -28,6 +36,7 @@ latte.describe()
 croissant.describe()
 cold_brew.describe()
 # step 4 - Can the Customer Afford It?
+Separation_of_printing_stages("step 4 - Can the Customer Afford It?")
 class Customer:
     def __init__(self, name, balance):
         self.name = name
@@ -42,6 +51,7 @@ bob = Customer("Bob", 10.0)
 print(bob.can_afford(8.0))
 print(bob.can_afford(12.0))
 # step 5 - Track Item Stock
+Separation_of_printing_stages("step 5 - Track Item Stock")
 class MenuItem:
     def __init__(self, name, price, in_stock):
         self.name = name
@@ -63,6 +73,7 @@ print(muffin.status())
 muffin.restock()
 print(muffin.status())
 # step 6 - Coffee Shop Open and Close
+Separation_of_printing_stages("step 6 - Coffee Shop Open and Close")
 class CoffeeShop:
     def __init__(self, name, city, capacity):
         self.name = name
@@ -76,6 +87,7 @@ brow_shop = CoffeeShop("Brew House", "Tel Aviv", 40)
 brow_shop.open_shop()
 brow_shop.close_shop()
 # step 7 - Count Item Orders
+Separation_of_printing_stages("step 7 - Count Item Orders")
 class MenuItem:
     def __init__(self, name, price):
         self.name = name
@@ -89,6 +101,7 @@ cappuccino.order()
 cappuccino.order()
 cappuccino.order()
 # step 8 - Print an Order
+Separation_of_printing_stages("step 8 - Print an Order")
 class Order:
     def __init__(self,customer_name, items):
         self.customer_name = customer_name
@@ -102,6 +115,7 @@ class Order:
 dana = Order("Dana", ["Latte", "Croissant", "OJ"])
 dana.print_order()
 # step 9 - Barista Shift Tracker
+Separation_of_printing_stages("step 9 - Barista Shift Tracker")
 class Barista:
     def __init__(self, name, specialty):
         self.name = name
@@ -125,6 +139,7 @@ yossi.make_drink("espresso")
 print(yossi.is_specialty("Espresso"))
 yossi.shift_summary()
 # step 10 - Receipt with Tax
+Separation_of_printing_stages("step 10 - Receipt with Tax")
 class Receipt:
     def __init__(self, tax_rate):
         self.tax_rate = tax_rate
