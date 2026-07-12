@@ -88,3 +88,16 @@ cappuccino = MenuItem("Cappuccino", 4.0)
 cappuccino.order()
 cappuccino.order()
 cappuccino.order()
+# step 8 - Print an Order
+class Order:
+    def __init__(self,customer_name, items):
+        self.customer_name = customer_name
+        self.items = items
+    def item_count(self):
+        return len(self.items)
+    def print_order(self):
+        print(f"order for: {self.customer_name} \nitems: {self.item_count()}")
+        for item in self.items:
+            print(f"- {item}")
+dana = Order("Dana", ["Latte", "Croissant", "OJ"])
+dana.print_order()
