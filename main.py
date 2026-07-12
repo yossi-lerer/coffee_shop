@@ -41,3 +41,24 @@ class Customer:
 bob = Customer("Bob", 10.0)
 print(bob.can_afford(8.0))
 print(bob.can_afford(12.0))
+# step 5 - Track Item Stock
+class MenuItem:
+    def __init__(self, name, price, in_stock):
+        self.name = name
+        self.price = price
+        self.in_stock = in_stock
+    def sell(self):
+        self.in_stock = False
+    def restock(self):
+        self.in_stock = True
+    def status(self):
+        if self.in_stock == True:
+            return f"{self.name} is in stock."
+        else:
+            return f"{self.name} is sold out."
+muffin = MenuItem("Muffin", 2.5, True)
+print(muffin.status())
+muffin.sell()
+print(muffin.status())
+muffin.restock()
+print(muffin.status())
